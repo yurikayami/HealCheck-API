@@ -42,7 +42,7 @@ namespace HealCheckAPI.Services
                 // Generate unique filename
                 var fileName = $"{Guid.NewGuid()}{Path.GetExtension(imageFile.FileName)}";
                 var filePath = Path.Combine(uploadsFolder, fileName);
-                
+
                 // Store relative path for URL construction
                 var relativePath = $"/uploads/{fileName}";
 
@@ -83,6 +83,7 @@ namespace HealCheckAPI.Services
                     UserId = userId,
                     Path = relativePath, // Use relative path, not full path!
                     Kcal = nutritionAnalysis.Calories,
+                    FoodName = nutritionAnalysis.FoodName,
                     AiSuggestion = nutritionAnalysis.Suggestion,
                     CreatedAt = DateTime.Now
                 };
@@ -163,6 +164,7 @@ namespace HealCheckAPI.Services
                 ImagePath = $"/uploads/{Path.GetFileName(image.Path)}",
                 Kcal = image.Kcal,
                 Gam = image.Gam,
+                FoodName = image.FoodName,
                 AiSuggestion = image.AiSuggestion,
                 CreatedAt = image.CreatedAt,
                 NutrientAnalysis = image.Analyses.Select(a => new NutrientAnalysisDto
@@ -197,6 +199,7 @@ namespace HealCheckAPI.Services
                 ImagePath = $"/uploads/{Path.GetFileName(image.Path)}",
                 Kcal = image.Kcal,
                 Gam = image.Gam,
+                FoodName = image.FoodName,
                 AiSuggestion = image.AiSuggestion,
                 CreatedAt = image.CreatedAt,
                 NutrientAnalysis = image.Analyses.Select(a => new NutrientAnalysisDto

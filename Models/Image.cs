@@ -23,6 +23,9 @@ namespace HealCheckAPI.Models
         [Column(TypeName = "decimal(10,2)")]
         public decimal? Gam { get; set; }
 
+        [MaxLength(255)]
+        public string? FoodName { get; set; }
+
         public string? AiSuggestion { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;

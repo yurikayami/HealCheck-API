@@ -61,3 +61,14 @@ INSERT INTO Nutrients ([Name], [Unit], [Description]) VALUES
 (N'Carbohydrate', N'gram', N'Tinh bột');
 GO
 ```
+
+
+Update Table
+
+```sql
+ALTER TABLE Images
+ADD DishName NVARCHAR(255) NULL;
+GO
+```
+
+

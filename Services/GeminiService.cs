@@ -40,7 +40,7 @@ namespace HealCheckAPI.Services
                         {
                             parts = new object[]
                             {
-                                new { text = "Analyze this food image and provide nutritional information. Return the response in JSON format with the following structure: {\"calories\": <number>, \"protein\": <number in grams>, \"fat\": <number in grams>, \"carbohydrate\": <number in grams>, \"suggestion\": \"<health suggestion>\"}. Only provide the JSON response without any additional text.(suggestion is use vietnamese)" },
+                                new { text = "Analyze this food image and provide nutritional information. Return the response in JSON format with the following structure: {\"foodName\": \"<tên món ăn bằng tiếng Việt>\", \"calories\": <number>, \"protein\": <number in grams>, \"fat\": <number in grams>, \"carbohydrate\": <number in grams>, \"suggestion\": \"<health suggestion in Vietnamese>\"}. Only provide the JSON response without any additional text." },
                                 new
                                 {
                                     inline_data = new

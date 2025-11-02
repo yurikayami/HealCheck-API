@@ -19,6 +19,7 @@ namespace HealCheckAPI.DTOs
         public string ImagePath { get; set; } = string.Empty;
         public decimal? Kcal { get; set; }
         public decimal? Gam { get; set; }
+        public string? FoodName { get; set; }
         public string? AiSuggestion { get; set; }
         public DateTime CreatedAt { get; set; }
         public List<NutrientAnalysisDto> NutrientAnalysis { get; set; } = new();
